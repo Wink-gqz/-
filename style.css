@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+}
+
+html,
+body {
+    font-size: 18px;
+}
+
+.header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    height: 4rem;
+    background-color: black;
+    box-shadow: 0 2px 10px 3px #000;
+    color: white;
+    display: flex;
+}
+
+.header>div {
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+.header ul {
+    display: flex;
+}
+
+.header .logo {
+    flex: 1;
+    font-size: 10px;
+    margin: 0 1%;
+    min-width: 9.4rem;
+}
+
+.header .logo h1 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.3rem;
+}
+
+.header .logo img {
+    height: 80%;
+}
+
+.header .menu {
+    flex: 5;
+}
+
+.header .menu ul {
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.header .menu ul li {
+    /* border: 1px solid red; */
+    display: flex;
+    flex: 1;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header .menu ul li:hover {
+    background: #625f5f;
+    transition: all 600ms linear .1s;
+}
+
+.header .menu ul li img {
+    height: 20px;
+}
+
+.header .side {
+    flex: 3;
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.side-menu {
+    display: none;
+}
+
+.header .side ul {
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: 0 3%;
+    height: 1.1rem;
+    color: #bfbfbf;
+    background: #808080;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    padding: 0 1rem;
+    font-size: 0.6rem;
+    justify-content: center;
+}
+
+.header .side ul li {
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    margin: 0 1%;
+}
+
+.header .side ul li:hover {
+    color: white;
+}
+
+.main {
+    border: 1px solid red;
+    margin: 5.6rem auto 0 auto;
+    width: 88vw;
+    max-width: 1200px;
+}
+
+
+/* 手机 */
+
+@media all and (max-width:330px) {
+    html {
+        font-size: 10px;
+    }
+    .header .logo {
+        margin: 0;
+    }
+    .header .logo h1 {
+        font-size: 1rem;
+    }
+}
+
+
+/* 平板 */
+
+@media all and (max-width:680px) {
+    html {
+        font-size: 13px;
+    }
+    .header .menu span {
+        display: none;
+    }
+    .header .side {
+        flex: 1;
+        margin-right: 2%;
+    }
+    .header .side ul {
+        display: block;
+        width: 0;
+        height: 2.2rem;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .header .side ul:hover {
+        height: 8rem;
+    }
+    .header .side ul li {
+        margin: 0.33rem 0 0.7rem 0;
+    }
+    .header .side ul li:nth-child(1) {
+        display: flex!important;
+    }
+    .header .side ul li span {
+        display: none;
+    }
+    .main {
+        width: 95vw;
+    }
+}
