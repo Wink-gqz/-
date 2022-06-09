@@ -83,9 +83,10 @@ body {
 
 .header .side {
     flex: 3;
-    margin-left: 2%;
+    margin:0 2%;
     display: flex;
     justify-content: center;
+	max-width:23.125rem ;
 }
 
 .side-menu {
